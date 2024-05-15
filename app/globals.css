@@ -8,14 +8,6 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -30,4 +22,20 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.ais-SearchBox-form {
+  @apply flex-1 flex items-center space-x-4;
+}
+
+.ais-Searchbox {
+  @apply flex items-center;
+}
+
+.ais-SearchBox-input {
+  @apply flex-1 rounded-md border border-gray-400 px-4 py-1;
+}
+
+.ais-Hits-list {
+  @apply grid md:grid-cols-3 gap-x-8 gap-y-10;
 }
